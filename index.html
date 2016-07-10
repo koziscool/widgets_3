@@ -11,11 +11,27 @@
 
   <div ng-controller="RestaurantCtrl">
     {{1+1}}
-    <form name="newRestaurant"
+    <form name="newRestaurant">
       <input type="text" label="Name" ng-model="formData.name"></input>
       <input type="text" label="Type of Food" ng-model="formData.type"></input>
       <input type="submit" value="Create Restaurant" ng-click="processForm()"></input>
     </form>
+
+    <table>
+      <thead>
+        <tr >
+          <td>Name</td>
+          <td>Type</td>
+        </tr>      
+      </thead>
+      <tbody>
+        
+        <tr ng-repeat="r in restaurants">
+          <td>{{ r.name }}</td>
+          <td>{{ r.foodType }}</td>
+        </tr>
+      </tbody>
+    </table>
 
   </div>
 </body>

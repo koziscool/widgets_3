@@ -1,10 +1,22 @@
 
 <!DOCTYPE html>
-<html>
+<html ng-app="widgets">
 <head>
-  <title></title>
+  <title>restaurant widgets</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="app.js"></script>
 </head>
 <body>
 
+  <div ng-controller="RestaurantCtrl">
+    {{1+1}}
+    <form name="newRestaurant"
+      <input type="text" label="Name" ng-model="formData.name"></input>
+      <input type="text" label="Type of Food" ng-model="formData.type"></input>
+      <input type="submit" value="Create Restaurant" ng-click="processForm()"></input>
+    </form>
+
+  </div>
 </body>
 </html>
